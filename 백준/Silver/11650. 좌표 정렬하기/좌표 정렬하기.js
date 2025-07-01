@@ -10,6 +10,5 @@ const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 const points = input.slice(1).map((line) => line.split(' ').map(Number));
 points.sort(comp);
 
-for (const point of points) {
-  console.log(point[0], point[1]);
-}
+const result = points.map((point) => point.join(' ')).join('\n');
+console.log(result);
