@@ -19,11 +19,7 @@ function solve(n, m, jewels) {
         }
     }
 
-    for (let i = 1; i <= n; i++) {
-        result = Math.max(result, dp[i][m]);
-    }
-
-    return result;
+    return dp[n][m]
 }
 
 console.log(solve(n, m, jewels));
