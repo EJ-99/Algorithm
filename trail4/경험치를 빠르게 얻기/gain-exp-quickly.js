@@ -18,7 +18,7 @@ function solve(n, m, quests) {
     for (let i = 0; i < n; i++) {
         const [e, t] = quests[i];
         for (let j = total; j >= 1; j--) {
-            if (j < e || dp[j - e] === -1) continue;
+            if (j < e) continue;
             dp[j] = Math.min(dp[j], dp[j - e] + t);
         }
     }
